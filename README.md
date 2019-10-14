@@ -9,25 +9,25 @@ Inspired by [Enforce code standards with composer, git hooks, and phpcs](http://
 
 ## Installation
 
-Install `smgladkovskiy/phpcs-git-pre-commit` with composer require command:
+Install `damien-list/phpcs-git-pre-commit` with composer require command:
 
-    composer require "smgladkovskiy/phpcs-git-pre-commit"
+    composer require "damien-list/phpcs-git-pre-commit"
 
-Or alternatively, include a dependency for `smgladkovskiy/phpcs-git-pre-commit` in your composer.json file manually:
+Or alternatively, include a dependency for `damien-list/phpcs-git-pre-commit` in your composer.json file manually:
 
     {
         "require-dev": {
-            "smgladkovskiy/phpcs-git-pre-commit": "dev-master"
+            "damien-list/phpcs-git-pre-commit": "dev-master"
         }
     }
 
 To enable code sniff, аdd to `post-install-cmd` and `post-update-cmd` in `composer.json` installation script:
 
     "post-install-cmd": [
-        "sh ./vendor/smgladkovskiy/phpcs-git-pre-commit/src/setup.sh"
+        "sh ./vendor/damien-list/phpcs-git-pre-commit/src/setup.sh"
     ],
     "post-update-cmd": [
-        "sh ./vendor/smgladkovskiy/phpcs-git-pre-commit/src/setup.sh"
+        "sh ./vendor/damien-list/phpcs-git-pre-commit/src/setup.sh"
     ]
 
 Then run `composer install` or `composer update`. `pre-commit` hook will be installed or updated if it already exists.
@@ -36,7 +36,7 @@ Then run `composer install` or `composer update`. `pre-commit` hook will be inst
 
 Run `git commit` and pre-commit hook will check your committed files like if you run
 
-    php phpcs.phar --standard=PSR2 --encoding=utf-8 -n -p /path/to/file.php
+    php-cs-fixer fix /path/to/file.php --dry-run
 
 ## Contributing
 
