@@ -1,15 +1,15 @@
 {
-    "name": "smgladkovskiy/phpcs-git-pre-commit",
-    "description": "PHPCS check before commit",
+    "name": "damien-list/phpcs-git-pre-commit",
+    "description": "PHP-CS-Fixer check before commit based on Sergey Gladkovskiy's work",
     "type": "scripts",
     "license": "MIT",
     "authors": [
         {
-            "name": "Sergey Gladkovskiy",
-            "email": "smgladkovskiy@gmail.com"
+            "name": "Damien List",
+            "email": "damien.list [AT] gmail.com"
         }
     ],
     "require": {
-        "squizlabs/php_codesniffer": "^2.7"
+        "friendsofphp/php-cs-fixer": "^2.16@dev"
     }
 }
