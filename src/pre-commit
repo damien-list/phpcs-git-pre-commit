@@ -29,12 +29,12 @@ done
 if [ "$FILES" != "" ]
 then
     echo "Running Code Sniffer. Code standard PSR2."
-    ./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix $FILES --dry-run
+    ./vendor/friendsofphp/php-cs-fixer/php-cs-fixer --config=./.php_cs.dist fix $FILES --dry-run
     if [ $? != 0 ]
     then
         echo "Fix the error before commit!"
         echo "Run"
-        echo "  ./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix $FILES"
+        echo "  ./vendor/friendsofphp/php-cs-fixer/php-cs-fixer --config=./.php_cs.dist fix $FILES"
         echo "for automatic fix or fix it manually."
         exit 1
     fi
