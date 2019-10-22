@@ -1,5 +1,11 @@
 #!/bin/sh
 
+if [ -d .git ];
+then
+    echo "Nothing Done, certainly on prod or preprod."
+    exit 0
+fi
+
 if [ -e .git/hooks/pre-commit ];
 then
     PRE_COMMIT_EXISTS=1
